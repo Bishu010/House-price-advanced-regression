@@ -99,13 +99,13 @@ Several regression models are being compared:
 |---|---:|
 | Ridge Regression | 0.14738 |
 | Random Forest | 0.14071 |
-| Gradient Boosting| **0.13318** |
+| Gradient Boosting| 0.13318 |
 
 Lower RMSE is better.
 
 ### Current Best Model
 
-🏆 **Gradient Boosting Regressor**
+Gradient Boosting Regressor
 
 Current 5-fold cross-validation RMSE:
 
@@ -130,7 +130,7 @@ y = np.log1p(train_df["SalePrice"])
 
 The final Gradient Boosting model achieved:
 
-**Kaggle RMSE: 0.12922**
+Kaggle RMSE: 0.12922
 
 ### Final Model
 
@@ -146,6 +146,6 @@ Gradient Boosting Regressor
 
 5-Fold Cross-Validation RMSE:
 
-**0.13059**
+0.13059
 
 The final model was trained on the complete training dataset and used to generate predictions for the Kaggle test dataset.
