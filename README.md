@@ -1,13 +1,13 @@
-# 🏠 House Prices - Advanced Regression Techniques
+#  House Prices - Advanced Regression Techniques
 
 Machine learning project for predicting house prices using the
 [Kaggle House Prices: Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) dataset.
 
 The goal of this project is to build a regression model that accurately predicts the sale price of residential properties based on features such as house quality, living area, neighborhood, garage, basement, and other property characteristics.
 
-## 📌 Project Status
+##  Project Status
 
-🚧 **In Progress**
+Completed
 
 Currently working on model selection and hyperparameter tuning.
 
@@ -17,10 +17,10 @@ Currently working on model selection and hyperparameter tuning.
 
 The dataset is provided by the Kaggle House Prices competition.
 
-- Training samples: **1,460**
-- Features: **79 original features**
-- Target: **SalePrice**
-- Problem type: **Regression**
+- Training samples: 1,460
+- Features: 79 original features
+- Target: SalePrice
+- Problem type: Regression
 
 The dataset contains information about residential properties in Ames, Iowa.
 
@@ -99,7 +99,7 @@ Several regression models are being compared:
 |---|---:|
 | Ridge Regression | 0.14738 |
 | Random Forest | 0.14071 |
-| **Gradient Boosting** | **0.13318** |
+| Gradient Boosting| **0.13318** |
 
 Lower RMSE is better.
 
@@ -109,7 +109,7 @@ Lower RMSE is better.
 
 Current 5-fold cross-validation RMSE:
 
-**0.13318**
+0.13318
 
 Further hyperparameter tuning will be performed before selecting the final model.
 
@@ -119,9 +119,33 @@ Further hyperparameter tuning will be performed before selecting the final model
 
 The primary evaluation metric used during model development is:
 
-**Root Mean Squared Error (RMSE)** on the log-transformed target.
+Root Mean Squared Error (RMSE) on the log-transformed target.
 
 The target variable is transformed using:
 
 ```python
 y = np.log1p(train_df["SalePrice"])
+
+## 🏆 Kaggle Result
+
+The final Gradient Boosting model achieved:
+
+**Kaggle RMSE: 0.12922**
+
+### Final Model
+
+Gradient Boosting Regressor
+
+- `n_estimators`: 1500
+- `learning_rate`: 0.02
+- `max_depth`: 3
+- `min_samples_leaf`: 8
+- `loss`: huber
+
+### Validation Performance
+
+5-Fold Cross-Validation RMSE:
+
+**0.13059**
+
+The final model was trained on the complete training dataset and used to generate predictions for the Kaggle test dataset.
